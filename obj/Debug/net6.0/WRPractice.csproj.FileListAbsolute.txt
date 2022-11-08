@@ -1,0 +1,15 @@
+C:\Users\Byte\source\repos\WRPractice\bin\Debug\net6.0\WRPractice.exe
+C:\Users\Byte\source\repos\WRPractice\bin\Debug\net6.0\WRPractice.deps.json
+C:\Users\Byte\source\repos\WRPractice\bin\Debug\net6.0\WRPractice.runtimeconfig.json
+C:\Users\Byte\source\repos\WRPractice\bin\Debug\net6.0\WRPractice.dll
+C:\Users\Byte\source\repos\WRPractice\bin\Debug\net6.0\WRPractice.pdb
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.csproj.AssemblyReference.cache
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.AssemblyInfoInputs.cache
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.AssemblyInfo.cs
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.csproj.CoreCompileInputs.cache
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.dll
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\refint\WRPractice.dll
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.pdb
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\WRPractice.genruntimeconfig.cache
+C:\Users\Byte\source\repos\WRPractice\obj\Debug\net6.0\ref\WRPractice.dll
