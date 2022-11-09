@@ -1,33 +1,36 @@
-﻿/* The region below is used to store
- * all of the necessary variables
- * for this program to properly work. */
-
-#region variables
-// Used to store what kind of thing user is having named.
-string a;
-// Used to store a user-defined descriptor of the thing being named.
-string b;
-// Used to store an additional hardcoded descriptor.
-string c;
-// Stores pre-defined version number of unnamed thing, for added flare.
-string d;
+﻿#region variables
+byte varByte = 255;
+sbyte varSByte = 127;
+short varShort = 32_000;
+ushort varUShort = 64_000;
+int varInt = 2_100_000_000;
+uint varUInt = 4_200_000_000;
+long varLong = 9_000_000_000_000_000_000;
+ulong varULong = 18_000_000_000_000_000_000;
+float varFloat = 3.147f;
+double varDouble = 3.147;
+decimal varDecimal = 3.147m;
+string varString = "Hello, World!";
+char varChar = 'c';
+bool varBool = true;
 #endregion
 
 #region console_output
-// Asks user to specify what kind of thing is being named.
-Console.WriteLine("What kind of thing are we talking about?");
-a = Console.ReadLine();
+// Prints out all of the above declared variables.
+Console.WriteLine(varByte + "\n" +
+    varSByte + "\n" +
+    varShort + "\n" +
+    varUShort + "\n" +
+    varInt + "\n" +
+    varUInt + "\n" +
+    varLong + "\n" +
+    varULong + "\n" +
+    varFloat + "\n" +
+    varDouble + "\n" +
+    varDecimal + "\n" +
+    varString + "\n" +
+    varChar + "\n" +
+    varBool);
 
-// Asks user to provide an additional descriptor of the thing being named.
-Console.WriteLine("How would you describe it? Big? Azure? Tattered?");
-b = Console.ReadLine();
-
-// Decides the pre-defined descriptor and version number for the thing being named.
-c = "of Doom";
-d = "3000";
-
-// Prints out to console the final name.
-Console.WriteLine("The " + b + " " + a + " " + c + " " + d + "!");
+Console.ReadLine(); // Used to pause the program.
 #endregion
-
-Console.ReadLine(); // Pauses program.
