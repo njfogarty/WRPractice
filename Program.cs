@@ -1,39 +1,22 @@
-﻿#region variables
-double triangleBase;
-double triangleHeight;
-double triangleArea;
-#endregion
+﻿#region software_information
+// Author: Noah Fogarty
+// Created: 10-Nov-2022
 
-#region software_information
 string version = "1.0";
-Console.WriteLine("Triangle Area Calculator - Version {0}", version);
+Console.WriteLine("Chocolate Egg Divider - Version {0}", version);
+
 Console.WriteLine("\n");
 #endregion
 
 #region console_output
-// Asks user to input the base of their triangle to be calculated later.
-Console.WriteLine("Please input the base of your triangle.");
-triangleBase = Convert.ToDouble(Console.ReadLine());
+// Asks user how many chocolate eggs there are.
+Console.WriteLine("How many chocolate eggs are there?");
+int chocolateEggs = Convert.ToInt32(Console.ReadLine()); 
 
-Console.WriteLine("\n");
-
-Console.WriteLine("Base = {0}", triangleBase);
-
-Console.WriteLine("\n");
-
-// Asks user to input the height of their triangle to be calculated later.
-Console.WriteLine("Please input the height of your triangle.");
-triangleHeight = Convert.ToDouble(Console.ReadLine());
-
-Console.WriteLine("\n");
-
-Console.WriteLine("Height = {0}", triangleHeight);
-
-Console.WriteLine("\n");
-
-// Calculates the area of user's triangle by utilizing the data from earlier.
-triangleArea = triangleBase * triangleHeight / 2;
-Console.WriteLine("The total area of your triangle is {0}", triangleArea);
+// Calculates how many chocolate eggs to give to the four sisters, and how much is remaining to give to the duckbear.
+int eggsDivided = chocolateEggs / 4;
+int eggsRemainder = chocolateEggs % 4;
+Console.WriteLine("The total eggs each sister gets is {0}, the duckbear gets {1}", eggsDivided, eggsRemainder);
 
 Console.ReadLine(); // Pauses program.
 #endregion
