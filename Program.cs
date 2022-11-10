@@ -1,36 +1,39 @@
 ﻿#region variables
-byte varByte = 255;
-sbyte varSByte = 127;
-short varShort = 32_000;
-ushort varUShort = 64_000;
-int varInt = 2_100_000_000;
-uint varUInt = 4_200_000_000;
-long varLong = 9_000_000_000_000_000_000;
-ulong varULong = 18_000_000_000_000_000_000;
-float varFloat = 3.147f;
-double varDouble = 3.147;
-decimal varDecimal = 3.147m;
-string varString = "Hello, World!";
-char varChar = 'c';
-bool varBool = true;
+double triangleBase;
+double triangleHeight;
+double triangleArea;
+#endregion
+
+#region software_information
+string version = "1.0";
+Console.WriteLine("Triangle Area Calculator - Version {0}", version);
+Console.WriteLine("\n");
 #endregion
 
 #region console_output
-// Prints out all of the above declared variables.
-Console.WriteLine(varByte + "\n" +
-    varSByte + "\n" +
-    varShort + "\n" +
-    varUShort + "\n" +
-    varInt + "\n" +
-    varUInt + "\n" +
-    varLong + "\n" +
-    varULong + "\n" +
-    varFloat + "\n" +
-    varDouble + "\n" +
-    varDecimal + "\n" +
-    varString + "\n" +
-    varChar + "\n" +
-    varBool);
+// Asks user to input the base of their triangle to be calculated later.
+Console.WriteLine("Please input the base of your triangle.");
+triangleBase = Convert.ToDouble(Console.ReadLine());
 
-Console.ReadLine(); // Used to pause the program.
+Console.WriteLine("\n");
+
+Console.WriteLine("Base = {0}", triangleBase);
+
+Console.WriteLine("\n");
+
+// Asks user to input the height of their triangle to be calculated later.
+Console.WriteLine("Please input the height of your triangle.");
+triangleHeight = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("\n");
+
+Console.WriteLine("Height = {0}", triangleHeight);
+
+Console.WriteLine("\n");
+
+// Calculates the area of user's triangle by utilizing the data from earlier.
+triangleArea = triangleBase * triangleHeight / 2;
+Console.WriteLine("The total area of your triangle is {0}", triangleArea);
+
+Console.ReadLine(); // Pauses program.
 #endregion
