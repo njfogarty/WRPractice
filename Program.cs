@@ -1,39 +1,53 @@
 ﻿#region software_information
 // Author: Noah Fogarty
-// Created: 10-Nov-2022
+// Created: 11-Nov-2022
 // Version: 1.0
 
-string version = "1.0";
-Console.WriteLine("Kingdom Score Calculator - {0}", version);
+Console.Title = "Defense of Consolas";
+string version = "1.0.0";
+Console.WriteLine("Defense of Consolas - Version {0}", version);
 
 Console.WriteLine("\n");
 #endregion
 
 #region variables
-int totalEstates; // Worth 1 point.
-int totalDuchies; // Worth 3 points.
-int totalProvinces; // Worth 6 points.
-int totalScore;
+int row;
+int column;
+int calculatedRow; // Used to temporary store calculated result.
+int calculatedColumn; // Used to temporary store calculated result.
 #endregion
 
 #region console_output
-// Asks user to input how many estates, duchies and provinces they have.
-Console.WriteLine("How many estates do you have?");
-totalEstates = Convert.ToInt32(Console.ReadLine());
+// Asks user to input a row and column.
+Console.Write("Target Row? ");
+row = Convert.ToInt32(Console.ReadLine());
+row = Math.Clamp(row, 1, 8); // Prevents user from specifying a row outside of range.
 
-Console.WriteLine("How many duchies do you have?");
-totalDuchies = Convert.ToInt32(Console.ReadLine());
+Console.Write("Target Column? ");
+column = Convert.ToInt32(Console.ReadLine());
+column = Math.Clamp(column, 1, 8); // Prevents user from specifying a column outside of range.
 
-Console.WriteLine("How many provinces do you have?");
-totalProvinces = Convert.ToInt32(Console.ReadLine());
+Console.BackgroundColor = ConsoleColor.Green;
+Console.ForegroundColor = ConsoleColor.Black;
 
-// Calculates total score based on above answers.
-// Estates are worth 1 point, duchies are worth 3 points, and provinces are worth 6 points.
-totalScore = totalEstates + (totalDuchies * 3) + (totalProvinces * 6);
+// Bulk of the calculations are done below, prints out a diamond-esque shape surrounding the specified city block.
+// Clamps are used in order to prevent the diamond from forming outside of range.
+calculatedColumn = Math.Clamp(column - 1, 1, 8);
+Console.WriteLine($"({row}, {calculatedColumn})");
 
-Console.WriteLine("\n");
+calculatedRow = Math.Clamp(row - 1, 1, 8);
+Console.WriteLine($"({calculatedRow}, {column})");
 
-Console.WriteLine("Your total score is {0}", totalScore);
+calculatedColumn = Math.Clamp(column + 1, 1, 8);
+Console.WriteLine($"({row}, {calculatedColumn})");
 
-Console.ReadLine(); // Pauses program.
+calculatedRow = Math.Clamp(row + 1, 1, 8);
+Console.WriteLine($"({column}, {calculatedRow})");
+
+Console.Beep(); // Plays audio cue to notify user that calculations have completed.
+
+Console.BackgroundColor = ConsoleColor.Black;
+Console.ForegroundColor = ConsoleColor.White;
+
+Console.ReadKey(true); // Pauses program.
 #endregion
